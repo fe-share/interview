@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>九宫格</title>
+        <style>
+            .grid{
+                width: 300px;
+                display: flex;
+                flex-wrap: wrap;
+                list-style: none;
+            }
+            .grid li{
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                border: 4px solid #ccc;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            .grid li{
+                margin-left: -4px;
+                margin-top: -4px;
+            }
+            .grid li:hover{
+                border-color: red;
+                z-index: 2;
+            }
+            /*最左侧的不需要边距消除*/
+            .grid li:nth-child(3n+1){
+                margin-left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="grid">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+        <script>
+            // 这是很简单的一道题,但是在实现过程中考察了css盒模型,层级,布局(多种实现方式),对选择器的应用,负边距的应用
+            // 隔壁群有个同学因为边距消除处理的并不好在这道题上吃了些小亏,所以这里提一下
+        </script>
+    </body>
+</html>
