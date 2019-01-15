@@ -40,7 +40,7 @@ M.prototype.__proto__ -> Object.prototype
 
 // 但Function是M.__proto__所指向的,不在o3的原型链上,所以为false
 // 此处M是Function的实例, 所以M.__proto__会单独延伸出一条链 
-// 所以在使用instanceof判断时会不准确, 一般使用constructor判断时最准备的
+// 所以在使用instanceof判断时会不准确, 一般使用constructor判断是最准确的
 
 o3.__proto__.constructor === M // true
 o3.__proto__.constructor === Object // false
