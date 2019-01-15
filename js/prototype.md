@@ -54,6 +54,7 @@ o3.__proto__.constructor === Object // false
 * 如果构造函数没有返回对象, 那么new出来的结果为初始对象
 
 ```
+// 模拟一个new运算符的实现
 var new2 = function(fun){
     var o = Object.create(fun.prototype) 
     var k = fun.call(o) // 将上下文绑定至新对象
