@@ -217,6 +217,10 @@ visitor: {
 此时每当Babel遇到FunctionDeclaration类型的节点时,会先将参数更名为n,之后再调用该节点的traverse函数,以我们新定义的visitor去更新函数内部节点信息,以此避免了修改外部的全局变量
 以上便是babel的基本工作流程
 
+参考文章
+
+[深入Babel，这一篇就够了](https://juejin.im/post/5c21b584e51d4548ac6f6c99)
+
 
 
 
