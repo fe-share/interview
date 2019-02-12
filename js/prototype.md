@@ -34,18 +34,36 @@ o3 instanceof Object => true // 这里也是true
 o3 instanceof Function => false
  
 // 这里之所以也是true,是因为Object也存在于实例对象o3的原型链上,Object也会被认为是o3的构造函数
-o3.__protp__ -> M.prototype
+o3.__proto__ -> M.prototype
 M.prototype包含constructor 和 __proto__
 M.prototype.__proto__ -> Object.prototype
 
 // 但Function是M.__proto__所指向的,不在o3的原型链上,所以为false
 // 此处M是Function的实例, 所以M.__proto__会单独延伸出一条链 
+// function其实就是一个语法糖 等同于 new Function(), 所以M是Function的实例,Function是M的构造函数
 // 所以在使用instanceof判断时会不准确, 一般使用constructor判断是最准确的
 
 o3.__proto__.constructor === M // true
 o3.__proto__.constructor === Object // false
-```
 
+```
+自己实现一个instanceof
+```
+function instanceof(left, right){
+    const left_proto = left.__proto__
+    const prototype = right.protype
+    
+    while(true){
+        if (let === null || left === undefined){
+            return false
+        }
+        if (prototype === left_proto){
+            return true
+        }
+        left = left.__proto__
+    }
+}
+```
 ## new运算符的原理
 `new foo() 时发生了什么`
 * 创建一个空对象,它将继承自foo.prototype `Object.create(foo.prototype).__proto__ === foo.prototype`
