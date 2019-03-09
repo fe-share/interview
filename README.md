@@ -37,6 +37,7 @@
 4. [跨域是什么？http协议中如何判断跨域？如何解决跨域问题？](./http/cross-origin.md)
 ## React
 1. [ReactDOM.render](./react/reactDOM/render.md)
+2. [FiberRoot & Fiber](./react/reactDOM/FiberRoot.md)
 ## Babel
 1. [babel是如何工作的](./babel/babel.md)
 ## 收集的一些比较有意思的面试题
