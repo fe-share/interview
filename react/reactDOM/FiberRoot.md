@@ -164,7 +164,7 @@ function FiberNode(
   this.expirationTime = NoWork;
   this.childExpirationTime = NoWork;
 
-  this.alternate = null;
+  this.alternate = null; // 可以理解为Fiber的副本，
     
    ....
 }
@@ -181,6 +181,12 @@ Fiber对象的作用是什么？
 在Fiber中也有这样的一个能力，来帮助我们记录节点属性，从而把整个应用的树形结构串联起来，形成一个Fiber树
 
 我们看到Fiber对象中有这么三个属性 `child`、`sibling`、`return`， 这三个属性能帮助我们把整个应用的节点串联
+
+这里主要说明一下`alternate`
+
+根据当前的Fiber对象创建一个`alternate`，更新时我们实际更新的是新创建出来的`alternate`， 然后在更新完成后把`current`和`alternate`进行交换，达到复用的目的，从而不需要每次重新创建对象
+这在React中叫做`doubleBuffer`
+
 
 [Fiber](../../assets/fiber.png)
 
