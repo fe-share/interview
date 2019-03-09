@@ -188,7 +188,7 @@ Fiber对象的作用是什么？
 这在React中叫做`doubleBuffer`
 
 
-[Fiber](../../assets/fiber.png)
+![Fiber](../../assets/fiber.png)
 
 所以我们每一个父节点，只会存储第一个子节点(child)，其余的子节点都为child节点的`sibling`, 所有的`return`都指向父节点
 
