@@ -29,7 +29,7 @@
 3. [原型链](./js/prototype.md)
 4. [继承](./js/extend.md)
 5. [实现call, apply, bind](./js/call.md)
-6. [垃圾回收机制](./js/trash.md)
+
 ## HTTP
 1. [http code](./http/code.md)
 2. [http 缓存逻辑是怎样的？协商缓存与强缓存？Last-Modified / Etag / Expires / Cache-Control ?](./http/cache.md)
